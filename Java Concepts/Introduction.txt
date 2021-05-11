@@ -1,0 +1,31 @@
+Java is one of the most programming languages out there. Java has many applications and a huge chunks of mobile/web applications
+that you use on a day to day basis are written in Java.
+For instance, all the android applications that you see today use Java in one way or the other.
+
+
+Java is an Object Oriented Programming languages, which levarages all the advantages of the OOPS concepts.
+Example: Inheritence, Polymorphism, Abstraction, Encapsulation
+
+
+Java is platform independent: Java programs are first converted into bytecodes, using a compiler. Then the bytecode runs on
+JVM (Java Virtual Machine), irrespective of the underlying architecture. Hence, Java code are easily reusable.
+
+
+Java Syntax is pretty similar to that of C++. But Java does not provide low level programming functionalities like pointers.
+
+
+Java is kind of in between C++ and Python. Java programs run faster than Python programs but slower than C++ Programs.
+While Java and C++ do static type checking, Python does dynamic type checking
+
+
+
+
+Static Type Checking: Variables must be declared before use.
+Dynamic: Need not.
+
+Dynamic Type Checking: reduces stress of declaring and maintaining types of variables at each point in the application,
+but it can lead to certain issue at run time.
+
+Example:
+number = 10;
+numbr = number * 10;   // Typo in number leads to declaration of another variable numbr
