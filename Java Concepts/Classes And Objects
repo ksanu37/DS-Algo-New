@@ -1,0 +1,50 @@
+                                    Classes and Objects in Java
+
+Class:
+User defined blueprint or prototype from which objects are created.
+It represents the set of properties or methods that are common to all the objects of one type.
+
+A typical class definition looks like:
+
+AccessModifier class className {
+
+}
+
+Example:
+public class hello{
+    public hello()
+}
+
+Constructors are used to initialise new objects.
+
+Types of Classes:
+Nested Class: Inner Class, method local inner class, static inner class, Anonymous inner class
+Anonymous class:
+Lambda Expression:
+
+
+
+
+OBJECTS:
+Objects are the basic unit of Object Oriented Programming and represent real-life entities.
+Classes act as blueprints for objects.
+
+Instantiating an object: Done by using the new operator.
+
+Dog dog = new Dog();
+
+Here Dog is the name of the class, dog is a refrence variable or simply the name of the object.
+The new operator allocates memory of a new object and returns the reference to the reference variable,
+it also invokes the constructor to the class.
+
+Note : All classes have at least one constructor. If a class does not explicitly declare any,
+the Java compiler automatically provides a no-argument constructor, also called the default constructor.
+This default constructor calls the class parent’s no-argument constructor (as it contain only one statement i.e super();),
+or the Object class constructor if the class has no other parent (as Object class is parent of all classes either directly or indirectly).
+
+Different Ways of creating/instantiating objects:
+1. new keyword
+2. using Class.forName(String className) method --> Test obj = (Test)Class.forName("com.p1.Test").newInstance();
+3. using clone method: --> Test t2 = (Test)t1.clone(), Here, t1 is an already created object. clone creates and returns a copy of the object.
+4. Deserialization: Technique of reading an object from the state in a file.
+
