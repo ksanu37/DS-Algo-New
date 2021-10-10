@@ -9,6 +9,8 @@ Example 1:
 Input: root = [1,2,2,3,4,4,3]
 Output: true
 
+The idea is to recursively check whether the left and right subtrees are mirrors of each other or not
+ */
 
 /**
  * Definition for a binary tree node.
