@@ -10,7 +10,7 @@ package design;
 
 
     Using Dequeue: We can use a doubly ended queue to maintain the keys
-        --> Whenever a key is referred:
+        --> Whenever a key is put:
                if the key is present, remove it from the queue and add it in front
                if the key is not present:
                     if the cache size is less than capacity, simply add it in front
@@ -20,5 +20,38 @@ package design;
 
  */
 
+import java.util.*;
+
 public class LRUCache {
+    private Deque<Integer> dequeue;
+    private HashMap<Integer, Integer> map;
+    private int capactiy;
+
+    LRUCache(int capactiy){
+        dequeue = new LinkedList<>();
+        map = new HashMap<>();
+        this.capactiy = capactiy;
+    }
+
+    public void put(int key, int value){
+        if(!map.containsKey(key)){ // The key is not present in the cache
+            if(dequeue.size() == capactiy){
+               int last = dequeue.removeLast(); // if the size is reached, removed LRU key
+                 map.remove(last);
+            }
+        } else { // The key is present, move it to the front
+            dequeue.remove(key);
+        }
+        dequeue.addFirst(key); // Add the key to the beginning of the queue
+        map.put(key, value);
+    }
+
+    public int get(int key){
+        if(map.containsKey(key)){ // If the cache contains the key, move it to front
+            dequeue.remove(key);
+            dequeue.push(key);
+            return map.get(key);
+        }
+        return -1;
+    }
 }
