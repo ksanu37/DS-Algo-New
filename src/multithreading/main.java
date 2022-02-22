@@ -7,6 +7,8 @@ public class main {
             String name = "thread"+i;
 
             //Running a thread which implements the Runnable interface
+            String threadName = Thread.currentThread().getName();
+
             ThreadUsingRunnable myThread = new ThreadUsingRunnable(name);
             Thread t = new Thread(myThread);
             t.start();

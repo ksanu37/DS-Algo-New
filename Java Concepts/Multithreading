@@ -12,3 +12,7 @@ Using the Runnable interface is better approach as the custom thread class can a
 Lifecycle of a thread: New --> Runnable --> Running --> Terminated
                                     ||
                                 Blocked(Non - Runnable) {In case of sleep, wait etc}
+
+Thread Operations:
+
+    The Thread class provides methods to perform operations with threads.
