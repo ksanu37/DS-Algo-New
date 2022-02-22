@@ -1,0 +1,14 @@
+Multithreading: A Process of executing multiple threads simultaneously.
+            --> Used to achieve multi-tasking
+
+Thread: Lightweight sub-process, the smallest unit of processing.
+
+Creating Thread in Java:
+    1. Using the Runnable interface
+    2. Using the Thread class
+
+Using the Runnable interface is better approach as the custom thread class can also extend some other class in this case.
+
+Lifecycle of a thread: New --> Runnable --> Running --> Terminated
+                                    ||
+                                Blocked(Non - Runnable) {In case of sleep, wait etc}
