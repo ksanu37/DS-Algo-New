@@ -19,7 +19,7 @@ public class TwoArraysAndSwaps {
         }
         for(int i= 0; i<k; i++) {
             if(b[b.length-1-i] - a[i] > 0){
-                sum += (b[b.length-1-i] - a[i]);
+                sum += b[b.length-1-i] - a[i];
             } else
                 break;
         }
