@@ -57,4 +57,42 @@ public class PalindromicSubstrings {
 
         return count;
     }
+
+    /**
+     *
+     * @param s
+     * @return length of the largest palindromic subsequence of the String s
+     *
+     * Follow the same procedure to check for a palindromic subsequence, here if we encounter start and end
+     * characters as same, the length of the largest subsequence till here is 2 + matrix[i+1][j-1]
+     * otherwise, the length will be calculated by getting the max (including char at i once and char at j once)
+     * --> Math.max(matrix[i+1][j], matrix[i][j-1])
+     */
+    public int longestPalindromicSubsequence(String s) {
+        int len = s.length();
+        int [][] matrix = new int[len][len];
+        for(int gap = 0; gap < len; gap++){
+            for(int i=0, j = i + gap; j < len; i++, j++){
+                if (gap == 0){
+                    matrix[i][j] = 1;
+                } else if(gap == 1){
+                    if(s.charAt(i) == s.charAt(j)){
+                        matrix[i][j] = 2;
+                    } else {
+                        matrix[i][j] = 1;
+                    }
+                } else {
+                    if(s.charAt(i) == s.charAt(j)) {
+                        // found start and end same, length = 2 + maxLen in enclosed String
+                        matrix[i][j] = 2 + matrix[i+1][j-1];
+                    } else {
+                        // maxLen will be either including start or including end, since both don't match and can't be included
+                        matrix[i][j] = Math.max(matrix[i][j-1], matrix[i+1][j]);
+                    }
+                }
+            }
+        }
+
+        return matrix[0][len-1];
+    }
 }
