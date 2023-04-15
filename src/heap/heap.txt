@@ -1,0 +1,32 @@
+Heap is a data structure used to maintain elements in a certain order.
+
+It is a complete binary tree, majorly of two types:
+1. Min Heap
+2. Max Heap
+
+
+In a max heap, the root is greater than both its left and right children,
+and the same is true for all the nodes in the tree.
+
+           4
+         2    3
+       1  0  2  1
+
+
+A Heap can be represented as an array. If we consider element at index i as node,
+then its left child  = 2*i + 1
+     its right child = 2*i + 2
+     its parent = (i-1)/2
+
+Operations on a Heap:
+1. heapify(int i) -> To convert a sub-tree into Heap, treating the index i as root of the sub-tree O(logN)
+2. removeTop() -> To remove the top element of the Heap O(logN)
+3. peek() -> To access the top element of the Heap O(1)
+4. changeKey(int i, int newVal) -> To Change the value of key at i to newVal O(logN)
+5. deleteKey(int i) -> To delete key at i O(logN)
+6. insertKey(int val) -> insert key val in the heap at its correct place O(logN)
+
+Advantages:
+Access to max/min element in the array in O(1)
+Efficient insertion and deletion O(logN)
+
