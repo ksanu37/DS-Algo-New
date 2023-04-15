@@ -17,5 +17,14 @@ public class Main {
         heap.insertKey(77);
         System.out.println("Inserted 77");
         System.out.println("Current Max Value = " + heap.peek());
+
+        HeapUsingPriorityQueue.addKey(23);
+        HeapUsingPriorityQueue.addKey(21);
+        HeapUsingPriorityQueue.addKey(44);
+        HeapUsingPriorityQueue.addKey(32);
+        HeapUsingPriorityQueue.addKey(87);
+        HeapUsingPriorityQueue.addKey(12);
+
+        HeapUsingPriorityQueue.printCurrentHeap();
     }
 }
